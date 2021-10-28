@@ -1,0 +1,22 @@
+
+
+- Dashboard of auction application displays ongoing auctions before all others
+	- auctions are shown in a grid that has as many columns as can fit in the size of the window
+		- each auction is represented by a card that has an image and an info box
+		- the info box is below the image on the card and has the type of auction, the name of the auction, how long until the auction ends, and how many people have participated in the auction
+	- future auctions are listed after all ongoing auctions
+	- past auctions are not automatically shown on the dashboard page
+	- there is a column menu on the left side of the dashboard page 
+		- The menu lets you select the type of auction: ongoing, past, future, or any combo of the three
+		- The menu also lets you select a time frame. The time frame you choose will determine how old the auctions you see are/ when they were first published
+		- the menu also lets you order auctions from most popular to least popular
+			- the auctions will still show up in the order, ongoing, future, and past (if selected in the menu)
+		- the menau also lets you order auctions from how much money has already been bid - low to high
+- To view a specific auction you must be signed in to your account
+	-Logged In Users can view specific auctions by clicking on the card they want
+	- When viewing an auction, logged in users see all the info that was on the dashboard card for that specific auction
+	- Logged in Users also see the option to bid in an auction if they have sufficient funds in thier account
+	- Users without sufficient funds can view an auction but all bidding buttons will be unclickabile and grayed out and an animation of a pirate spilling coins all over the buttons will play. The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold, the user is reidrected to the dashboard and kciked off the previous page they were viewing
+	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
+		- 
+
