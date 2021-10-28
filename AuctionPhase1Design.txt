@@ -19,5 +19,24 @@
 	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play. 
 		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing
 	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
-		- 
+		- Drop down menu to the right top side of the ongoing auctions row at the bottom of the page
+			- will let you see 12, 72, or 144 more ongoing auctions
+			- each row of auctions on this page will have 12 auction cards
+
+	- Below the resizable list/rows of similar ongoing auctions, there is a comment section
+		- Logged in Users have the ability to add comments with their username attached to thier comments
+		- Not logged in Users can only view the first 25 comments of the dicussion. 
+			- once this user has scrolled to  the 25th comment, a button to create account or sign in appears
+
+ 	- At the top of the application there is a navigation bar
+ 		- Navigation bar contains
+ 			- Dashboard, Create an Auction, Search Bar, and Account tabs	
+ 				- Create an Auction tab is only visible if user is logged in
+ 				- search bar can only search for other users if searching user is logged in
+- Create an Auction page looks exactly like specific auction pages except there is a green submit button on the bottom right corner and each piece of info that would regularly show up on a specific auction page is blank with fill-in text instructing the user on what info is required in the blank slot. 
+	- confetti streaks across screen in firework pattern (like the common app submission) when auctions are submitted.
+ - Any time a username is used - comments, auctioneers - there is a plus sign to the rigth of the name. Plus sign acts as a follow button. 
+ 	- followed users auctions will show up first on your dasboard and will create a new option on the dashboard menu - to see your followed users auctions
+
+
 
