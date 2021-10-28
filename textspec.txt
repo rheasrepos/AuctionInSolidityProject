@@ -1,0 +1,42 @@
+
+
+- Dashboard of auction application displays ongoing auctions before all others
+	- auctions are shown in a grid that has as many columns as can fit in the size of the window
+		- each auction is represented by a card that has an image and an info box
+		- the info box is below the image on the card and has the type of auction, the name of the auction, how long until the auction ends, and how many people have participated in the auction
+	- future auctions are listed after all ongoing auctions
+	- past auctions are not automatically shown on the dashboard page
+	- there is a column menu on the left side of the dashboard page 
+		- The menu lets you select the type of auction: ongoing, past, future, or any combo of the three
+		- The menu also lets you select a time frame. The time frame you choose will determine how old the auctions you see are/ when they were first published
+		- the menu also lets you order auctions from most popular to least popular
+			- the auctions will still show up in the order, ongoing, future, and past (if selected in the menu)
+		- the menau also lets you order auctions from how much money has already been bid - low to high
+- To view a specific auction you must be signed in to your account
+	-Logged In Users can view specific auctions by clicking on the card they want
+	- When viewing an auction, logged in users see all the info that was on the dashboard card for that specific auction
+	- Logged in Users also see the option to bid in an auction if they have sufficient funds in thier account
+	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play. 
+		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing
+	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
+		- Drop down menu to the right top side of the ongoing auctions row at the bottom of the page
+			- will let you see 12, 72, or 144 more ongoing auctions
+			- each row of auctions on this page will have 12 auction cards
+
+	- Below the resizable list/rows of similar ongoing auctions, there is a comment section
+		- Logged in Users have the ability to add comments with their username attached to thier comments
+		- Not logged in Users can only view the first 25 comments of the dicussion. 
+			- once this user has scrolled to  the 25th comment, a button to create account or sign in appears
+
+ 	- At the top of the application there is a navigation bar
+ 		- Navigation bar contains
+ 			- Dashboard, Create an Auction, Search Bar, and Account tabs	
+ 				- Create an Auction tab is only visible if user is logged in
+ 				- search bar can only search for other users if searching user is logged in
+- Create an Auction page looks exactly like specific auction pages except there is a green submit button on the bottom right corner and each piece of info that would regularly show up on a specific auction page is blank with fill-in text instructing the user on what info is required in the blank slot. 
+	- confetti streaks across screen in firework pattern (like the common app submission) when auctions are submitted.
+ - Any time a username is used - comments, auctioneers - there is a plus sign to the rigth of the name. Plus sign acts as a follow button. 
+ 	- followed users auctions will show up first on your dasboard and will create a new option on the dashboard menu - to see your followed users auctions
+
+
+
