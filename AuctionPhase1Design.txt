@@ -16,7 +16,8 @@
 	-Logged In Users can view specific auctions by clicking on the card they want
 	- When viewing an auction, logged in users see all the info that was on the dashboard card for that specific auction
 	- Logged in Users also see the option to bid in an auction if they have sufficient funds in thier account
-	- Users without sufficient funds can view an auction but all bidding buttons will be unclickabile and grayed out and an animation of a pirate spilling coins all over the buttons will play. The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold, the user is reidrected to the dashboard and kciked off the previous page they were viewing
+	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play. 
+		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing
 	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
 		- 
 
