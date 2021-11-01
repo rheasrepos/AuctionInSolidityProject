@@ -1,12 +1,38 @@
+Text Spec Instructions: 
+
+Auction Class: 
+- varibales: image, String description, double timeRenaining, String name, int numOfPeople, double timeTillStart
+- methods: getters and setters, boolean finished 
+- Finished() --> if the block has already been mined (i.e. the time remaining is 0) this becomes true 
+
+
+Dashboard Class implements Auction Class: 
+- Varaibles: Arraylist of CurrentAuctions with length that represents the number of auctions that are happening -1, ArrayList of FutureAuctions
+- DeleteExpired() --> goes through the currentAuction arraylists and checks the timeRemaning of each Auction object and deletes any Auction objects thats boolean finished is true
+- AddAuction ()--> if auction's timeTillStart is 0 (on the current block that is being mined) and then will add it to the end of the CurrentAuctions ArrayList 
+- AddAuction2()--> goes thorugh arraylist of future auctions and sees if the timeTillStart is now 0 (on the current block that is being mined). If it is 0 then add this auction object to CurrentAuctions
+- To do the selecting thing, I assume you need to implement this with HTML. But I honestly don't think it is necessary. Espeically because we already order them 
+
+
+User Class: 
+- Varibales: user name, password, hashmap users
+- SignIn ()--> this method will use the JOptionPain thing that ms.Kaufman taught us 
+-- NewUser()--> creates a new user and then adds it to a hashmap thats like a dictionary that stores all the users and their passwords
+
+
+MasterClass implements User Class, Dashboard Class, Auction Class
+- 
+
+
 
 
 - Dashboard of auction application displays ongoing auctions before all others
 	- auctions are shown in a grid that has as many columns as can fit in the size of the window
 		- each auction is represented by a card that has an image and an info box
-		- the info box is below the image on the card and has the type of auction, the name of the auction, how long until the auction ends, and how many people have participated in the auction
+		- the info box is below the image on the card and has the type of auction, the name of the auction, how long until the auction ends, and how many people have participated in the auction, if someone has bought the item 
 	- future auctions are listed after all ongoing auctions
-	- past auctions are not automatically shown on the dashboard page
-	- there is a column menu on the left side of the dashboard page 
+	- past auctions are not shown on the dashboard page
+	- there is a column menu on the left side of the dashboard page
 		- The menu lets you select the type of auction: ongoing, past, future, or any combo of the three
 		- The menu also lets you select a time frame. The time frame you choose will determine how old the auctions you see are/ when they were first published
 		- the menu also lets you order auctions from most popular to least popular
@@ -17,7 +43,7 @@
 	- When viewing an auction, logged in users see all the info that was on the dashboard card for that specific auction
 	- Logged in Users also see the option to bid in an auction if they have sufficient funds in thier account
 	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play. 
-		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing
+		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing (NOT DOING THIS)
 	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
 		- Drop down menu to the right top side of the ongoing auctions row at the bottom of the page
 			- will let you see 12, 72, or 144 more ongoing auctions
