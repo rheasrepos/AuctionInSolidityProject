@@ -2,26 +2,35 @@ Text Spec Instructions:
 
 Auction Class: 
 - varibales: image, String description, double timeRenaining, String name, int numOfPeople, double timeTillStart
-- methods: getters and setters, boolean finished 
-- Finished() --> if the block has already been mined (i.e. the time remaining is 0) this becomes true 
+- methods: 
+	- 	getters ()
+	- setters ()
+	- boolean finished ()
+	- Finished() --> if the block has already been mined (i.e. the time remaining is 0) this becomes true 
 
 
 Dashboard Class implements Auction Class: 
 - Varaibles: Arraylist of CurrentAuctions with length that represents the number of auctions that are happening -1, ArrayList of FutureAuctions
-- DeleteExpired() --> goes through the currentAuction arraylists and checks the timeRemaning of each Auction object and deletes any Auction objects thats boolean finished is true
-- AddAuction ()--> if auction's timeTillStart is 0 (on the current block that is being mined) and then will add it to the end of the CurrentAuctions ArrayList 
-- AddAuction2()--> goes thorugh arraylist of future auctions and sees if the timeTillStart is now 0 (on the current block that is being mined). If it is 0 then add this auction object to CurrentAuctions
+- Methods
+	- DeleteExpired() --> goes through the currentAuction arraylists and checks the timeRemaning of each Auction object and deletes any Auction objects thats boolean finished is true
+	- AddAuction ()--> if auction's timeTillStart is 0 (on the current block that is being mined) and then will add it to the end of the CurrentAuctions ArrayList 
+	- AddAuction2()--> goes thorugh arraylist of future auctions and sees if the timeTillStart is now 0 (on the current block that is being mined). If it is 0 then add this auction object to CurrentAuctions
 - To do the selecting thing, I assume you need to implement this with HTML. But I honestly don't think it is necessary. Espeically because we already order them 
 
 
 User Class: 
 - Varibales: user name, password, hashmap users
-- SignIn ()--> this method will use the JOptionPain thing that ms.Kaufman taught us 
--- NewUser()--> creates a new user and then adds it to a hashmap thats like a dictionary that stores all the users and their passwords
+- Methods: 
+	- SignIn ()--> this method will use the JOptionPain thing that ms.Kaufman taught us 
+	-- NewUser()--> creates a new user and then adds it to a hashmap thats like a dictionary that stores all the users and their passwords
+	-- CheckFunds()--> returns true if the user has enough funds to buy something 
 
 
 MasterClass implements User Class, Dashboard Class, Auction Class
-- 
+- variables: inherits all the varibales from the other classes 
+Methods: all methods are inherited ffrom other classes. Only new methods will be added here
+	-- Bid()--> calls CheckFunds() and then allows bidder to bid if the CheckFunds() returns true
+	-- Similar()--> go through the curentAcutions in Auction class and retusn an arrayList with similar auctions
 
 
 
@@ -42,7 +51,7 @@ MasterClass implements User Class, Dashboard Class, Auction Class
 	-Logged In Users can view specific auctions by clicking on the card they want
 	- When viewing an auction, logged in users see all the info that was on the dashboard card for that specific auction
 	- Logged in Users also see the option to bid in an auction if they have sufficient funds in thier account
-	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play. 
+	- Users without sufficient funds can view an auction but all bidding buttons will be unclickable and x'ed out (A RED X) and an animation of a pirate spilling coins all over the buttons will play.  (I am not doing this)
 		- The window will play a sound of a pirate saying "What a poor, poor, pooooor lad. Ye better find me some gold". Immediatley after the word gold is played, the user is reidrected to the dashboard and kciked off the previous page they were viewing (NOT DOING THIS)
 	- Logged in users with sufficient funds will see similar ongoing auctions at the bottom of the page of specific auction they are viewing. 
 		- Drop down menu to the right top side of the ongoing auctions row at the bottom of the page
@@ -54,7 +63,7 @@ MasterClass implements User Class, Dashboard Class, Auction Class
 		- Not logged in Users can only view the first 25 comments of the dicussion. 
 			- once this user has scrolled to  the 25th comment, a button to create account or sign in appears
 
- 	- At the top of the application there is a navigation bar
+ 	- At the top of the application there is a navigation bar (This is HTML)
  		- Navigation bar contains
  			- Dashboard, Create an Auction, Search Bar, and Account tabs	
  				- Create an Auction tab is only visible if user is logged in
