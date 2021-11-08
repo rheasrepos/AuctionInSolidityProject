@@ -10,18 +10,21 @@ Auction Class:
 
 
 Dashboard Class implements Auction Class: 
-- Varaibles: Arraylist of CurrentAuctions with length that represents the number of auctions that are happening -1, ArrayList of FutureAuctions
+- Varaibles: 
+    - Arraylist of CurrentAuctions with length that represents the number of auctions that are happening -1, 
+    - ArrayList of FutureAuctions
 - Methods
 	- DeleteExpired() --> goes through the currentAuction arraylists and checks the timeRemaning of each Auction object and deletes any Auction objects thats boolean finished is true
-	- AddAuction ()--> if auction's timeTillStart is 0 (on the current block that is being mined) and then will add it to the end of the CurrentAuctions ArrayList 
-	- AddAuction2()--> goes thorugh arraylist of future auctions and sees if the timeTillStart is now 0 (on the current block that is being mined). If it is 0 then add this auction object to CurrentAuctions
+	    - break this into 2 methods: checkRemainingTime() and delete()
+	- addAuctionNow()--> if auction's timeTillStart is 0 (on the current block that is being mined) and then will add it to the end of the CurrentAuctions ArrayList 
+	- addAuctionFuture()--> goes thorugh arraylist of future auctions and sees if the timeTillStart is now 0 (on the current block that is being mined). If it is 0 then add this auction object to CurrentAuctions
 - To do the selecting thing, I assume you need to implement this with HTML. But I honestly don't think it is necessary. Espeically because we already order them 
 
 
 User Class: 
 - Varibales: user name, password, hashmap users
 - Methods: 
-	- SignIn ()--> this method will use the JOptionPain thing that ms.Kaufman taught us 
+	-- SignIn ()--> check users if account already exists, then logs in
 	-- NewUser()--> creates a new user and then adds it to a hashmap thats like a dictionary that stores all the users and their passwords
 	-- CheckFunds()--> returns true if the user has enough funds to buy something 
 
