@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.9+commit.e5eed63a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Auction.sol": "Auction"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Auction.sol": {
+			"keccak256": "0x86bf98cea909d851f42fda9c4abb05d5e621c047506998a0bcece3c2abe111f3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://c1996d4ea0ce6769e9bd3b5ddbd7100597d6141338b76bb7fe13c8b98a0cf3dd",
+				"dweb:/ipfs/QmYWsj59XLwSXZNYRy1hn3DWgoMQ1ADYPgLB4wAfpRXsJh"
+			]
+		}
+	},
+	"version": 1
+}
