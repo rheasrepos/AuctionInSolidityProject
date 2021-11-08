@@ -39,11 +39,19 @@
 	},
 	"sources": {
 		"Auction.sol": {
-			"keccak256": "0x86bf98cea909d851f42fda9c4abb05d5e621c047506998a0bcece3c2abe111f3",
+			"keccak256": "0xf9ead0f92377cc5a79a6f9b965048443dcf3d530b2f99b9c8ad9349225d866e5",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c1996d4ea0ce6769e9bd3b5ddbd7100597d6141338b76bb7fe13c8b98a0cf3dd",
-				"dweb:/ipfs/QmYWsj59XLwSXZNYRy1hn3DWgoMQ1ADYPgLB4wAfpRXsJh"
+				"bzz-raw://103cd3261d648ebe0e4808a2dc107c9dd0d5265e8fa6ff90a329120cc9f5456b",
+				"dweb:/ipfs/QmRQBohR2HbHxE24TFZyFs8Nnc8YJcVMLjr7NNKvdNKJRt"
+			]
+		},
+		"User.sol": {
+			"keccak256": "0x157b8c5ab0867125997c39f730ced6dcbcd7457c96734bfc22bbc5e806466f18",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://4bacc398bbb661564b059f114efa26e280ee5f6b48e8d6d96bbe5a2be60dc60e",
+				"dweb:/ipfs/QmNazNr4Y3kfaCJ4z6ogTLQC52VaGvTEGc52FrB5LwrXuY"
 			]
 		}
 	},

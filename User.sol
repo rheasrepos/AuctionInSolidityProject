@@ -48,6 +48,10 @@ contract User {
         }
     }
     
+    function checkBalance() public view returns (uint256) {
+        return users[user].balance;
+    }
+    
     
     
 }

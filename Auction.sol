@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.9;
+import "User.sol";
 
 contract Auction {
     
     address creator;
     uint256 highestBid;
+    User user;
     
     constructor() {
         creator = msg.sender;
@@ -16,7 +18,7 @@ contract Auction {
     }
     
     modifier sufficientFunds() {
-        require (balance >= highestBid, "Insufficient funds.");
+        require (user.checkBalance() >= highestBid, "Insufficient funds.");
         _;
     }
     

@@ -11,6 +11,19 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "checkBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -91,11 +104,11 @@
 	},
 	"sources": {
 		"User.sol": {
-			"keccak256": "0x8408f960e1b64190aa2767a62d9cc114281e36dab2cbe0867ef3a4bae9e5d1a9",
+			"keccak256": "0x157b8c5ab0867125997c39f730ced6dcbcd7457c96734bfc22bbc5e806466f18",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d8e1484d2ef98a6551134fd16875433d79ef698dcede03b1abee0e666a24e19b",
-				"dweb:/ipfs/QmR4tWJiRxNjFSMKA9QbU5Ykiti3boAT4RUYVwh7gWhBC6"
+				"bzz-raw://4bacc398bbb661564b059f114efa26e280ee5f6b48e8d6d96bbe5a2be60dc60e",
+				"dweb:/ipfs/QmNazNr4Y3kfaCJ4z6ogTLQC52VaGvTEGc52FrB5LwrXuY"
 			]
 		}
 	},
