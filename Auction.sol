@@ -16,10 +16,7 @@ contract Auction {
     address public winner;
     
     address creator;
-    string item;
     uint256 highestBid;
-    string description;
-    uint256 startTime;
     uint256 endTime;
     uint256 startPrice;
     uint256 currentPrice;

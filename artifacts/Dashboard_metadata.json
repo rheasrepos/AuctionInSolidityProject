@@ -8,142 +8,27 @@
 			{
 				"inputs": [
 					{
-						"internalType": "contract IERC721",
-						"name": "_nft",
+						"internalType": "contract Auction",
+						"name": "auction",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_nftID",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_startPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "hoursFromNow",
-						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "winner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Buy",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "winner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Win",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "contract User",
-						"name": "bidder",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					}
-				],
-				"name": "bid",
+				"name": "addAuction",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "nft",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "contract IERC721",
-						"name": "",
+						"internalType": "contract Auction",
+						"name": "auction",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "nftID",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "seller",
-				"outputs": [
-					{
-						"internalType": "address payable",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "win",
+				"name": "endAuction",
 				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "winner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -160,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Auction.sol": "Auction"
+			"Dashboard.sol": "Dashboard"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -252,6 +137,14 @@
 			"urls": [
 				"bzz-raw://86eb41b6dcfbd727fafd4f57142385beca2d1ef1c131f74b23f2cc04cc0578c2",
 				"dweb:/ipfs/QmQFQxsgbVGxzf1qqruJMRHq4Dm2oDWnaVpGW8mkwPJb8e"
+			]
+		},
+		"Dashboard.sol": {
+			"keccak256": "0xd5e51949e783d550bc69131189035083c8ef57820dcbc2b0ba2f392b994d5f67",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://707c8762594437c30a2ba8af9e6664f96891228f824cc8d00300b9bdcb86e55c",
+				"dweb:/ipfs/QmZNLHCN66B9fXngrTpt3RGFdkbkPTsyfzLhkp4BR2bZae"
 			]
 		},
 		"User.sol": {
