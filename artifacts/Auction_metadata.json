@@ -6,28 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "contract IERC721",
-						"name": "_nft",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_nftID",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_startPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "hoursFromNow",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -70,21 +49,56 @@
 				"type": "event"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "currentPrice",
+				"outputs": [
 					{
-						"internalType": "contract User",
-						"name": "bidder",
-						"type": "address"
-					},
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "price",
 						"type": "uint256"
 					}
 				],
-				"name": "bid",
+				"name": "directBid",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "end",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endEarly",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -127,15 +141,36 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "win",
+				"inputs": [
+					{
+						"internalType": "contract IERC721",
+						"name": "_nft",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nftID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hoursFromNow",
+						"type": "uint256"
+					}
+				],
+				"name": "setup",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "winner",
+				"name": "topBidder",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -247,19 +282,19 @@
 			]
 		},
 		"Auction.sol": {
-			"keccak256": "0xa0b4c3fea2f7546a941224eb2031311fc624de427c1dac0f6b61ee405491c821",
+			"keccak256": "0xebcb605148e7323100e9629f8228ed65f6a7fdf3ca4c6b1c2ae1e9f617eaaf32",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://86eb41b6dcfbd727fafd4f57142385beca2d1ef1c131f74b23f2cc04cc0578c2",
-				"dweb:/ipfs/QmQFQxsgbVGxzf1qqruJMRHq4Dm2oDWnaVpGW8mkwPJb8e"
+				"bzz-raw://65a535d2165273353fa699237769bf033c8ed7db2d6307d12ea283ebd13ab648",
+				"dweb:/ipfs/QmdGeFqrEtVqXV6aorPDBgkUxrimMPCbGdirxwi1nh5FMH"
 			]
 		},
 		"User.sol": {
-			"keccak256": "0x157b8c5ab0867125997c39f730ced6dcbcd7457c96734bfc22bbc5e806466f18",
+			"keccak256": "0xdd120f35d5512a9f0b800ac1838cd15cff31206307f3d1a5f0bc120df9f35cdb",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4bacc398bbb661564b059f114efa26e280ee5f6b48e8d6d96bbe5a2be60dc60e",
-				"dweb:/ipfs/QmNazNr4Y3kfaCJ4z6ogTLQC52VaGvTEGc52FrB5LwrXuY"
+				"bzz-raw://ea84c79a7972e0f213b3dbef67cb53114b74ba6b6ce1d697c52127b82062bb01",
+				"dweb:/ipfs/QmeYKMSTHqJPXQBEXEh9TqYuEkTEnYDSjFne9tUDCTKENj"
 			]
 		}
 	},

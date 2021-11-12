@@ -52,6 +52,10 @@ contract User {
         return users[user].balance;
     }
     
+    function getAddress() public view returns (address) {
+        return user;
+    }
+    
     
     
 }

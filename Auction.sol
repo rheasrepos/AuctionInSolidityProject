@@ -9,32 +9,25 @@ contract Auction {
     
     event Buy(address winner, uint256 amount);
     
-    IERC721 public immutable nft;
-    uint256 public immutable nftID;
+    IERC721 public nft;
+    uint256 public nftID;
     
-    address payable public seller;
-    address public winner;
+    address payable public immutable seller;
     
-    address creator;
-    uint256 highestBid;
-    uint256 endTime;
-    uint256 startPrice;
-    uint256 currentPrice;
-    User topBidder;
+    uint256 public endTime;
+    uint256 public currentPrice;
+    address public topBidder;
     
-    
-    constructor(
-        IERC721 _nft,
-        uint _nftID,
-        uint256 _startPrice,
-        uint256 hoursFromNow
-    ) {
-        require (_startPrice > 0, "Invalid start price.");
+    constructor() {
         seller = payable (msg.sender);
+    }
+    
+    
+    function setup (IERC721 _nft, uint _nftID, uint256 startPrice, uint256 hoursFromNow) public {
+        require (startPrice > 0, "Invalid start price.");
         nft = IERC721(_nft);
         nftID = _nftID;
-        startPrice = _startPrice;
-        currentPrice = _startPrice;
+        currentPrice = startPrice;
         endTime = block.timestamp + (hoursFromNow * 1 hours);
     }
     
@@ -56,18 +49,37 @@ contract Auction {
     
     
     
-    function bid(User bidder, uint256 price) public beforeEnd {
-        require (bidder.checkBalance() > highestBid, "Insufficient funds.");
-        topBidder = bidder;
+    // function bid(address bidder, uint256 price) public beforeEnd {
+    //     require (price > currentPrice, "Insufficient funds.");
+    //     topBidder = bidder;
+    //     currentPrice = price;
+    // }
+    
+    function directBid(uint256 price) public beforeEnd {
+        require (price > currentPrice, "Insufficient funds.");
+        topBidder = msg.sender;
         currentPrice = price;
     }
     
-    function win() external payable afterEnd {
-        winner = msg.sender;
-        nft.transferFrom(seller, msg.sender, nftID);
-        seller.transfer(msg.value);
+    function end() public payable afterEnd {
+        //nft.approve(topBidder, nftID);
+        nft.safeTransferFrom(address(this), topBidder, nftID);
+        seller.transfer(currentPrice);
         
-        emit Win(msg.sender, msg.value);
     }
+    
+    function endEarly() public payable {
+        //nft.approve(topBidder.getAddress(), nftID);
+        nft.safeTransferFrom(address(this), topBidder, nftID);
+        seller.transfer(currentPrice);
+    }
+    
+    // function win() external payable afterEnd {
+    //     winner = msg.sender;
+    //     nft.safeTransferFrom(address(this), topBidder, nftID);
+    //     seller.transfer(msg.value);
+        
+    //     emit Win(msg.sender, msg.value);
+    // }
     
 }
