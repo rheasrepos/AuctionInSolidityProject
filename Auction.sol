@@ -50,14 +50,14 @@ contract Auction {
     function end() public payable afterEnd {
         //nft.approve(topBidder, nftID);
         nft.safeTransferFrom(address(this), topBidder, nftID);
-        seller.transfer(currentPrice);
+        //seller.transfer(currentPrice);
         
     }
     
     function endEarly() public payable {
         //nft.approve(topBidder.getAddress(), nftID);
         nft.safeTransferFrom(address(this), topBidder, nftID);
-        seller.transfer(currentPrice);
+        //seller.transfer(currentPrice);
     }
     
 }
