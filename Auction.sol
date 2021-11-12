@@ -1,13 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.9;
-import "User.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract Auction {
-    
-    event Win(address winner, uint256 amount);
-    
-    event Buy(address winner, uint256 amount);
     
     IERC721 public nft;
     uint256 public nftID;
@@ -22,7 +17,6 @@ contract Auction {
         seller = payable (msg.sender);
     }
     
-    
     function setup (IERC721 _nft, uint _nftID, uint256 startPrice, uint256 hoursFromNow) public {
         require (startPrice > 0, "Invalid start price.");
         nft = IERC721(_nft);
@@ -30,10 +24,6 @@ contract Auction {
         currentPrice = startPrice;
         endTime = block.timestamp + (hoursFromNow * 1 hours);
     }
-    
-    
-
-
     
     modifier beforeEnd() {
         require (block.timestamp < endTime, "This auction has already ended. Too late, too slow, goodbye.");
@@ -44,10 +34,6 @@ contract Auction {
         require (block.timestamp > endTime, "This auction hasn't ended yet. Maybe learn to read.");
         _;
     }
-    
-    
-    
-    
     
     // function bid(address bidder, uint256 price) public beforeEnd {
     //     require (price > currentPrice, "Insufficient funds.");
@@ -73,13 +59,5 @@ contract Auction {
         nft.safeTransferFrom(address(this), topBidder, nftID);
         seller.transfer(currentPrice);
     }
-    
-    // function win() external payable afterEnd {
-    //     winner = msg.sender;
-    //     nft.safeTransferFrom(address(this), topBidder, nftID);
-    //     seller.transfer(msg.value);
-        
-    //     emit Win(msg.sender, msg.value);
-    // }
     
 }

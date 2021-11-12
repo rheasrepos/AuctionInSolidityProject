@@ -11,44 +11,6 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "winner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Buy",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "winner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Win",
-				"type": "event"
-			},
-			{
 				"inputs": [],
 				"name": "currentPrice",
 				"outputs": [
@@ -282,19 +244,11 @@
 			]
 		},
 		"Auction.sol": {
-			"keccak256": "0xebcb605148e7323100e9629f8228ed65f6a7fdf3ca4c6b1c2ae1e9f617eaaf32",
+			"keccak256": "0xef4a2c9b28963fe369379ea7523aacaaa675dad938875195b3c2a5434b0eaf2a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://65a535d2165273353fa699237769bf033c8ed7db2d6307d12ea283ebd13ab648",
-				"dweb:/ipfs/QmdGeFqrEtVqXV6aorPDBgkUxrimMPCbGdirxwi1nh5FMH"
-			]
-		},
-		"User.sol": {
-			"keccak256": "0xdd120f35d5512a9f0b800ac1838cd15cff31206307f3d1a5f0bc120df9f35cdb",
-			"license": "GPL-3.0",
-			"urls": [
-				"bzz-raw://ea84c79a7972e0f213b3dbef67cb53114b74ba6b6ce1d697c52127b82062bb01",
-				"dweb:/ipfs/QmeYKMSTHqJPXQBEXEh9TqYuEkTEnYDSjFne9tUDCTKENj"
+				"bzz-raw://701e7e1b914eadea293f22dbcd0254c3f22bccb26fe88f808353c91ef212e0c5",
+				"dweb:/ipfs/QmUanbtoHe4FiF8cfiUS3u8Y8CkrkxRp51EnTUEXbn2WRF"
 			]
 		}
 	},
